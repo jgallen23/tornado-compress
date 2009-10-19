@@ -38,3 +38,9 @@ def run(settings):
         if (force or u) or verbosity >= 2:
             print
 
+def compressed(self, type, name):
+    from compress import uimodules
+    if type == 'css':
+        return uimodules.compressed_css(name)
+    elif type == 'js':
+        return uimodules.compressed_js(name)

@@ -62,7 +62,7 @@ def media_root(filename):
 def media_url(url, prefix=None):
     if prefix:
         return prefix + urlquote(url)
-    return tornado_settings.MEDIA_URL + urlquote(url)
+    return tornado_settings['MEDIA_URL'] + urlquote(url)
 
 def concat(filenames, separator=''):
     """
